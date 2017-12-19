@@ -54,8 +54,7 @@ public class WatcherWorker implements Watcher {
 					String data = new String(bdata, "UTF-8");
 					if(data.equals("1")) {
 						ZooContact.zoo.delete(event.getPath(), -1);
-						System.out.println("You've been registered successfully !");
-						//JOptionPane.showMessageDialog(null, "You've been registered successfully !", "Information", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "You've been registered successfully !", "Information", JOptionPane.INFORMATION_MESSAGE);
 				
 					}else if(data.equals("2")) {
 						ZooContact.zoo.delete(event.getPath(), -1);
@@ -73,8 +72,7 @@ public class WatcherWorker implements Watcher {
 					String data = new String(bdata, "UTF-8");
 					if(data.equals("1")) {
 						ZooContact.zoo.delete("/request/quit/"+LoginDialog.ID.getText(), -1);
-						//System.out.println("You've been registered successfully !");
-						//JOptionPane.showMessageDialog(null, "Your account has been removed successfully !", "Information", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Your account has been removed successfully !", "Information", JOptionPane.INFORMATION_MESSAGE);
 					}else if(data.equals("2")) {
 						ZooContact.zoo.delete("/request/quit/"+LoginDialog.ID.getText(), -1);
 						//JOptionPane.showMessageDialog(null, "You are not registered !", "Attention", JOptionPane.WARNING_MESSAGE);
