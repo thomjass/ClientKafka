@@ -54,17 +54,10 @@
                     <programs>
                         <program>
                             <mainClass>Manager_Kafka.ClientKafka.Client</mainClass>
-                            <commandLineArguments>
-                                <commandLineArgument>url_zoo</commandLineArgument>
-                                <commandLineArgument>url_kafka</commandLineArgument>
-                            </commandLineArguments>
                             <id>client</id>
                         </program>
                         <program>
                             <mainClass>Manager_Kafka.ClientKafka.TestWatcher</mainClass>
-                            <commandLineArguments>
-                                <commandLineArgument>url_kafka</commandLineArgument>
-                            </commandLineArguments>
                             <id>client_test</id>
                         </program>
                     </programs>
