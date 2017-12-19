@@ -29,9 +29,13 @@ public class Consumer {
     public void readMessages(){
         ConsumerRecords<String, String> records = consumer.poll(10);
         for(ConsumerRecord<String, String> record : records){
-            //FOR TEST
-            ReceiveInterface.message_receive.append("   ("+(new Timestamp(System.currentTimeMillis())+")" + record.value()+"\n"));
-            //ReceiveInterface.message_receive.append("   "+record.value().split("/")[0]+" ("+(new Date()).toString()+"):  "+record.value().split("/")[1]+"\n");
+            
+        	try {
+        		ReceiveInterface.message_receive.append("   "+record.value().split("/")[0]+" ("+(new Date()).toString()+"):  "+record.value().split("/")[1]+"\n");
+        	}catch(Exception e) {
+        		//FOR TEST
+        		ReceiveInterface.message_receive.append("   ("+(new Timestamp(System.currentTimeMillis())+")" + record.value()+"\n"));
+        	}
         }
     }
 }
